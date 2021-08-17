@@ -82,3 +82,68 @@ brew install --cask another-redis-desktop-manager
 
 
 
+## Redis data type
+
+Redis has 5 kinds of data type and store format is key-value
+
+![img](https://i.loli.net/2021/08/17/AQWDwUFhaiXmnJ2.png)
+
+### String
+
++ the value can contain any of data, like number, string, image or seriallzation.
+
++ Use Case:
+
+  + Cache: reduce database r/w frequency
+  + Counter
+  + Session: Share session and cutomize token.
+
++ Example
+
+  ![image-20210817233843001](https://i.loli.net/2021/08/17/qP7BfgA1c84airL.png) 
+
+### Hash
+
++ Redis hash is key-value collection
+
+  ![image](https://i.loli.net/2021/08/17/RNVvZc4gYFQlJn8.png)
+
++ Use case
+
+  + Cache: need less space compare with string
+
+  + Store object
+
+    ![image-20210817234230765](https://i.loli.net/2021/08/17/pmQBCtLeNwyf641.png)
+
+### List
+
+![image](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8xNTE2NjEzMC04NDlhNDdhMzBkOTMyMWFhLnBuZw?x-oss-process=image/format,png)
+
++ Use Case
+
+  + timeline: Twitter timeline,
+
+  ![image-20210817234431128](https://i.loli.net/2021/08/17/QL1aHoZ6qIbirV8.png)
+
+### Set
+
++ Similar as list, but set can auto sorting and remove duplicate value
++ ![image](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8xNTE2NjEzMC0xODU3MDU5OWZjNWE5MTY0LnBuZw?x-oss-process=image/format,png)
++ Use Case
+  + Tag: add tag to user, or use add tag to message, so can recommend the information to people who under same tag or similar tag
+  + "like": 
+  + 秒杀![image-20210817235117394](https://i.loli.net/2021/08/17/8SENDATmlZFvGWL.png) 
+
+### ZSet
+
++ Almost same as set, but different is that each of element has one score. this score will be use to sort the value form lowest to highest. 
+
+  ![image](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8xNTE2NjEzMC0zMjY5ZmM1YjU1MzhmNmRlLnBuZw?x-oss-process=image/format,png)
+
+  + Use Case
+
+    + Top 10
+
+      ![image-20210817235324923](https://i.loli.net/2021/08/17/8zSGIJbqhRH5tBf.png)
+
